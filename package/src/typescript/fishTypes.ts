@@ -10,7 +10,7 @@ export type DisplayType = 'topButton' | 'teaser' | 'inline';
 export type fishOpts = {
     type: DisplayType | DisplayType[];
     siteKey: string;
-    siteName: string;
+    siteName: 'fishfinder.sea' | 'everyfish.io';
     page: 'Fish' | 'Phone' | 'Address';
 };
 

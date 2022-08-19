@@ -50,7 +50,7 @@ function getStyles(style:StyleSheets) {
 }
 
 function getFish(requestData: FishReq) {
-    const response: any = fetch('big-fish/fishes', {
+    const response: any = fetch(`${process.env.BIG_FISH_URL}big-fish/fishes`, {
         headers: {
             'Content-Type': 'application/json',
         },
@@ -119,11 +119,11 @@ function showInline() {
 }
 
 function showTopButton() {
-    const inline = document.getElementById('topButton') as HTMLHtmlElement;
+    const topButton = document.getElementById('topButton') as HTMLHtmlElement;
     
     getStyles('topButtonStyles');
     
-    inline.innerHTML = /* HTML */ `
+    topButton.innerHTML = /* HTML */ `
         <section class="top-section">
             <h3 class="title">TOP DISPLAY</h3> 
             <p>To show off the BIG catches</p>

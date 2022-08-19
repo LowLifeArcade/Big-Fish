@@ -8,7 +8,7 @@ export declare type DisplayType = 'topButton' | 'teaser' | 'inline';
 export declare type fishOpts = {
     type: DisplayType | DisplayType[];
     siteKey: string;
-    siteName: string;
+    siteName: 'fishfinder.sea' | 'everyfish.io';
     page: 'Fish' | 'Phone' | 'Address';
 };
 export declare type FishReq = {

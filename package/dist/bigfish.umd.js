@@ -65,7 +65,7 @@
   }
   function getFish(requestData) {
       var _a;
-      const response = fetch('big-fish/fishes', {
+      const response = fetch(`${process.env.BIG_FISH_URL}big-fish/fishes`, {
           headers: {
               'Content-Type': 'application/json',
           },
@@ -118,8 +118,8 @@
             `;
   }
   function showTopButton() {
-      const inline = document.getElementById('topButton');
-      inline.innerHTML = /* HTML */ `
+      const topButton = document.getElementById('topButton');
+      topButton.innerHTML = /* HTML */ `
         <section class="top-section">
             <h3 class="title">TOP DISPLAY</h3> 
             <p>To show off the BIG catches</p>
