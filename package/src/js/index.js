@@ -37,7 +37,8 @@ function getStyles(style) {
 }
 function getFish(requestData) {
     var _a;
-    const response = fetch(`${process.env.BIG_FISH_URL}big-fish/fishes`, {
+    const BIG_FISH_URL = '';
+    const response = fetch(`${BIG_FISH_URL}big-fish/fishes`, {
         headers: {
             'Content-Type': 'application/json',
         },
