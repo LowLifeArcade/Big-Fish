@@ -8,7 +8,7 @@ export interface FishResult {
 export type DisplayType = 'topButton' | 'teaser' | 'inline'; 
 
 export type fishOpts = {
-    type: DisplayType | DisplayType[]; 
+    type: DisplayType | DisplayType[];
     siteKey: string;
     siteName: string;
     page: 'Fish' | 'Phone' | 'Address';

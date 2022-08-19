@@ -1,3 +1,8 @@
+import '../../styles/inlineStyles.css'
+import '../../styles/mainStyles.css'
+import '../../styles/teaserStyles.css'
+import '../../styles/topButtonStyles.css'
+
 import { DisplayType, fishOpts, FishReq, FishResult, StyleSheets } from './fishTypes'
 
 window.seeBigFish = function(opts: fishOpts) {

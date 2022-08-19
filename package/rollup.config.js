@@ -1,6 +1,7 @@
 import { terser } from "rollup-plugin-terser";
 import css from 'rollup-plugin-css-only';
 import pkg from './package.json';
+import postcss from 'rollup-plugin-postcss'
 
 export default {
     // preserveModules: true,
@@ -17,6 +18,9 @@ export default {
         },
     ],
     plugins: [
+        postcss({
+            extensions: ['.css']
+        })
         // css({output: 'bundle.css'}), 
         // terser()
     ],

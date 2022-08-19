@@ -1,3 +1,42 @@
+function styleInject(css, ref) {
+  if ( ref === void 0 ) ref = {};
+  var insertAt = ref.insertAt;
+
+  if (!css || typeof document === 'undefined') { return; }
+
+  var head = document.head || document.getElementsByTagName('head')[0];
+  var style = document.createElement('style');
+  style.type = 'text/css';
+
+  if (insertAt === 'top') {
+    if (head.firstChild) {
+      head.insertBefore(style, head.firstChild);
+    } else {
+      head.appendChild(style);
+    }
+  } else {
+    head.appendChild(style);
+  }
+
+  if (style.styleSheet) {
+    style.styleSheet.cssText = css;
+  } else {
+    style.appendChild(document.createTextNode(css));
+  }
+}
+
+var css_248z$3 = ".inline-section {\n    border: solid 1px;\n    padding: 10px;\n    margin: 5px 0;\n    max-width: 600px;\n    background: aqua;\n    border-radius: 2px;\n}\np {\n    padding: 10px 0;\n}";
+styleInject(css_248z$3);
+
+var css_248z$2 = "button {\n    white-space: nowrap;\n    padding: 7px 20px;\n    border: none;\n    border-radius: 5px;\n    font-weight: 700;\n    background-color: honeydew;\n    cursor: pointer;\n    box-shadow: 2px 2px 4px rgba(0,0,0,0.2);\n}\nbutton:active {\n    background-color: rgb(255, 226, 216);\n    box-shadow: 0 0 0;\n    transition: ease-in-out .05s;\n}\nh1 {\n    margin-bottom: 10px;\n}\n\n.shadow-l {\n    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);\n}\n\n.shadow-s {\n    box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.2);\n}";
+styleInject(css_248z$2);
+
+var css_248z$1 = ".teaser-section {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    background-color: aqua;\n    border: 1px solid;\n    padding: 20px;\n    width: 600px;\n    border-radius: 2px;\n    margin-bottom: 30px;\n}\n\n.teaser-location {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n}\n\n.teaser-title {\n    font-size: 2rem;\n    margin-bottom: 10px;\n}\n\ntable {\n    border: 1px solid;\n    padding: 10px;\n    width: 100%;\n    border-radius: 3px;\n}\n\nth {\n    text-align: start;\n    white-space: nowrap;\n}\n\nth, td {\n    padding: 3px 20px;\n    margin: 4px;\n    border-radius: 2px;\n}\n\n.teaser-results {\n    background-color: antiquewhite;\n    padding: 10px;\n    \n}\n\n@media (max-width: 600px) {\n    .teaser-section {\n        display: none;\n    }\n}";
+styleInject(css_248z$1);
+
+var css_248z = ".top-section {\n    border: solid 1px;\n    padding: 30px;\n    margin: 5px 0;\n    max-width: 600px;\n    background: aqua;\n    border-radius: 3px;\n}\n.title {\n    font-size: 3rem;\n}\np {\n    padding: 10px 0;\n}\n";
+styleInject(css_248z);
+
 window.seeBigFish = function (opts) {
     const { type, siteKey, page, siteName } = opts;
     const requestData = {

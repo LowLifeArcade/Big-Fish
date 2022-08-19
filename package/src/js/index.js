@@ -1,3 +1,7 @@
+import '../../styles/inlineStyles.css';
+import '../../styles/mainStyles.css';
+import '../../styles/teaserStyles.css';
+import '../../styles/topButtonStyles.css';
 window.seeBigFish = function (opts) {
     const { type, siteKey, page, siteName } = opts;
     const requestData = {
@@ -103,4 +107,3 @@ function showTopButton() {
         </section>
             `;
 }
-export {};
