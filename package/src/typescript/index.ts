@@ -41,12 +41,12 @@ function is( type:string | string[], str: DisplayType) {
 }
 
 function getStyles(style:StyleSheets) {
-    const head = document.getElementsByTagName('HEAD')[0];
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = `../package/styles/${style}.css`;
-    head.appendChild(link);
+    // const head = document.getElementsByTagName('HEAD')[0];
+    // const link = document.createElement('link');
+    // link.rel = 'stylesheet';
+    // link.type = 'text/css';
+    // link.href = `../package/styles/${style}.css`;
+    // head.appendChild(link);
 }
 
 function getFish(requestData: FishReq) {

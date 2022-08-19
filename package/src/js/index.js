@@ -28,12 +28,12 @@ function is(type, str) {
         type === str;
 }
 function getStyles(style) {
-    const head = document.getElementsByTagName('HEAD')[0];
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = `../package/styles/${style}.css`;
-    head.appendChild(link);
+    // const head = document.getElementsByTagName('HEAD')[0];
+    // const link = document.createElement('link');
+    // link.rel = 'stylesheet';
+    // link.type = 'text/css';
+    // link.href = `../package/styles/${style}.css`;
+    // head.appendChild(link);
 }
 function getFish(requestData) {
     var _a;

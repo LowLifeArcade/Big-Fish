@@ -44,7 +44,6 @@ window.seeBigFish = function (opts) {
         // ... other data
     };
     const fishResults = getFish(requestData);
-    getStyles('mainStyles');
     if (is(type, 'teaser')) {
         showTeaser(fishResults);
     }
@@ -58,14 +57,6 @@ window.seeBigFish = function (opts) {
 function is(type, str) {
     return (typeof type === 'object' && type.includes(str)) ||
         type === str;
-}
-function getStyles(style) {
-    const head = document.getElementsByTagName('HEAD')[0];
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = `../package/styles/${style}.css`;
-    head.appendChild(link);
 }
 function getFish(requestData) {
     var _a;
@@ -87,7 +78,6 @@ function getFish(requestData) {
 }
 function showTeaser(fish) {
     const teaser = document.getElementById('teaser');
-    getStyles('teaserStyles');
     teaser.innerHTML = /* HTML */ `
         <section class="teaser-section shadow-l">
             <h2 class="teaser-title">Fish List</h2>
@@ -114,7 +104,6 @@ function showTeaser(fish) {
 }
 function showInline() {
     const inline = document.getElementById('inline');
-    getStyles('inlineStyles');
     inline.innerHTML = /* HTML */ `
         <section class="inline-section shadow-s">
             <h3>BIG FISH BUMPER</h3> 
@@ -125,7 +114,6 @@ function showInline() {
 }
 function showTopButton() {
     const inline = document.getElementById('topButton');
-    getStyles('topButtonStyles');
     inline.innerHTML = /* HTML */ `
         <section class="top-section">
             <h3 class="title">TOP DISPLAY</h3> 
