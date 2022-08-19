@@ -51,7 +51,7 @@ function getStyles(style:StyleSheets) {
 
 function getFish(requestData: FishReq) {
     const BIG_FISH_URL = '';
-    const response: any = fetch(`${BIG_FISH_URL}big-fish/fishes`, {
+    const response: any = fetch(`${BIG_FISH_URL}/api/v1/fish`, {
         headers: {
             'Content-Type': 'application/json',
         },
