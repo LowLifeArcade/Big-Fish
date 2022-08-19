@@ -7,13 +7,19 @@ export interface FishResult {
 
 export type DisplayType = 'topButton' | 'teaser' | 'inline'; 
 
-export type fishOpts = {
+export type WhiteList = 'fishfinder.sea' | 'everyfish.io';
+
+export type Page = 'Fish' | 'Phone' | 'Address';
+
+export type FishOpts = {
     type: DisplayType | DisplayType[];
     siteKey: string;
-    siteName: 'fishfinder.sea' | 'everyfish.io';
-    page: 'Fish' | 'Phone' | 'Address';
+    siteName: WhiteList;
+    page: Page;
 };
 
 export type FishReq = {
-    siteKey: string
+    siteKey: string,
+    siteName: WhiteList,
+    page: Page
 }

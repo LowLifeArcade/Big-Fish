@@ -3,9 +3,9 @@ import '../../styles/mainStyles.css'
 import '../../styles/teaserStyles.css'
 import '../../styles/topButtonStyles.css'
 
-import { DisplayType, fishOpts, FishReq, FishResult, StyleSheets } from './fishTypes'
+import { DisplayType, FishOpts, FishReq, FishResult, StyleSheets } from './fishTypes'
 
-window.seeBigFish = function(opts: fishOpts) {
+window.seeBigFish = function(opts: FishOpts) {
     const { 
         type, 
         siteKey,
@@ -15,6 +15,8 @@ window.seeBigFish = function(opts: fishOpts) {
     
     const requestData: FishReq = {
         siteKey,
+        siteName,
+        page
         // ... other data
     };
     
@@ -54,6 +56,7 @@ function getFish(requestData: FishReq) {
     const response: any = fetch(`${BIG_FISH_URL}/api/v1/fish`, {
         headers: {
             'Content-Type': 'application/json',
+            'User-Agent': requestData.siteName
         },
         method: 'POST',
         body: JSON.stringify(requestData),
