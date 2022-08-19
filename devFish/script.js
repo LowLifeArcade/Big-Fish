@@ -3,7 +3,7 @@ const fishOpts = {
     type: ['teaser', 'inline', 'topButton'],
     siteKey: '88fjljlFsl299Xf', 
     page: 'Fish',
-    siteName: 'bigfishfinder.com'
+    siteName: 'fishfinder.sea'
 };
 
 window.onload = seeBigFish(fishOpts);
