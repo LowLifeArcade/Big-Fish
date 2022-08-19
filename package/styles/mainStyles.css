@@ -1,0 +1,26 @@
+button {
+    white-space: nowrap;
+    padding: 7px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    background-color: honeydew;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+button:active {
+    background-color: rgb(255, 226, 216);
+    box-shadow: 0 0 0;
+    transition: ease-in-out .05s;
+}
+h1 {
+    margin-bottom: 10px;
+}
+
+.shadow-l {
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.shadow-s {
+    box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,26 @@
+{
+  "name": "@lowlifearcade/big-fish",
+  "version": "0.0.3",
+  "description": "bigfish content loader",
+  "browser": "dist/bigfish.umd.js",
+  "module": "dist/bigfish.esm.js",
+  "main": "dist/bigfish.esm.js",
+  "scripts": {
+    "dev": "tsc --watch",
+    "watch": "rollup -c -w",
+    "build": "rollup -c"
+  },
+  "author": "Sonny Brown",
+  "license": "MIT",
+  "devDependencies": {
+    "rollup": "^2.78.0",
+    "rollup-plugin-css-only": "^3.1.0",
+    "rollup-plugin-scss": "^3.0.0",
+    "rollup-plugin-terser": "^7.0.2"
+  },
+  "files": [
+    "dist/*",
+    "types/*",
+    "styles/*"
+  ]
+}

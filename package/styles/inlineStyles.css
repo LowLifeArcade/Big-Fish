@@ -1,0 +1,11 @@
+.inline-section {
+    border: solid 1px;
+    padding: 10px;
+    margin: 5px 0;
+    max-width: 600px;
+    background: aqua;
+    border-radius: 2px;
+}
+p {
+    padding: 10px 0;
+}
